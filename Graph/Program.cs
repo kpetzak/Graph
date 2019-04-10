@@ -10,6 +10,16 @@ namespace Graph
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Connected graph components: ");
+
+            for (int v = 0; v < GraphComponents.graph.Size; v++)
+            {
+                if (!GraphComponents.visited[v])
+                {
+                    GraphComponents.TraverseDFS(v);
+                    Console.WriteLine();
+                }
+            }
         }
     }
 }
